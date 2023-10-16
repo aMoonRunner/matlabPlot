@@ -25,9 +25,8 @@ line_cosx = plot(x, cos(x)); %创建cosx波形对象
 
 ![图片加载失败](/pictures/2023-10-11-17-17-16.png)
 
-
-
 ---
+
 我比较习惯用这样的方式：先创建一个对象，再修改这个对象的属性（也可以通过函数的方式修改对象）
 可以通过“myFig.”的方式来查看有哪些属性可以编辑(需要工作区事先有这个变量)
 
@@ -67,8 +66,11 @@ waveLineWidth = 3; %波形的线宽
 myFig = figure(1); %创建myFig对象
 myFig.Name = "testFig";
 myFig.Units = "centimeters";
-myFig.Position = [35 18 20 10]; %坐标x,y,长，宽
+myFig.Position = [20 18 20 10]; %坐标x,y,长，宽
 myFig.Color = [1 1 1]; %背景色白色
+inspect(gcf); %打开属性检查器
+% plotbrowser on;%打开绘图浏览器
+% propertyeditor;%打开属性编辑器
 x = (0:0.01:6 * pi);
 wave_sinx = plot(x, sin(x)); %创建sinx波形对象
 hold on;
@@ -81,7 +83,7 @@ ax = gca; %获取当先坐标轴(get current axes)
 ax.XLim = [0 6 * pi];
 ax.YLim = [-1.2 1.2];
 ax.FontSize = figureFontSize;
-ax.FontName = "Times";
+ax.FontName = "Times New Roman";
 ax.GridLineStyle = "--";
 ax.XGrid = "on";
 ax.XMinorGrid = "on";
@@ -100,13 +102,13 @@ ax.Title.String = "{\bfsin {\itx} and cos {\itx}}";
 % =============== 修改坐标轴属性 end =====================================
 
 %% =============== 修改波形属性 start =====================================
-wave_sinx.Color = [0,0,0];
+wave_sinx.Color = [0, 0, 0];
 wave_sinx.LineStyle = "-";
 wave_sinx.LineWidth = waveLineWidth;
 wave_sinx.Marker = "o";
 wave_sinx.MarkerIndices = (1:50:length(sin(x))); %曲线上的标记点(避免数据标记过于密集)
-wave_sinx.MarkerFaceColor = [0.60,0.20,0.00];
-wave_sinx.MarkerEdgeColor = [0.60,0.20,0.00];
+wave_sinx.MarkerFaceColor = [0.60, 0.20, 0.00];
+wave_sinx.MarkerEdgeColor = [0.60, 0.20, 0.00];
 wave_sinx.MarkerSize = waveLineWidth * 2;
 
 wave_cosx.Color = "red";
@@ -119,9 +121,16 @@ wave_cosx.MarkerEdgeColor = [0.90, 0.56, 0.04]; %调整曲线的RGB色
 wave_cosx.MarkerSize = waveLineWidth * 2;
 % =============== 修改波形属性 end =====================================
 
+%% =============== 加图例 start =====================================
+lgd = legend(["sin(x)", "cos(x)"]);
+lgd.Location = "northeast";
+% lgd.Position=[0.792737242214184,0.812893100354656,0.101747172219413,0.091509431488109];
+% =============== 加图例 end =====================================
+
 %% 复制到剪切板，导出为tiff文件
 copygraphics(myFig, "Resolution", 600);
-exportgraphics(myFig, "myFig.tiff","Resolution", 600);
+exportgraphics(myFig, "myFig.tiff", "Resolution", 600);
+
 
 ```
 
@@ -129,10 +138,9 @@ exportgraphics(myFig, "myFig.tiff","Resolution", 600);
 
 ![图片加载失败](/pictures/2023-10-11-17-19-37.png)
 
-
 如果对于图片的某个属性不满意，可以先在$figure$图窗里调整好，再写进程序里
 例如：觉得图中的绿线太亮了，黑色圈圈的标记太丑了
-把_绘图浏览器_和_属性编辑器_都点上
+把 _绘图浏览器_ 和 _属性编辑器_ 都点上
 ![](pictures/2023-10-15-22-16-23.png)
 就成了这样
 ![](pictures/2023-10-15-22-19-06.png)
@@ -141,3 +149,7 @@ exportgraphics(myFig, "myFig.tiff","Resolution", 600);
 觉得这个黑色比较好看，那就把这个属性再填回程序中，这样以后就能一键运行了
 ![](pictures/2023-10-15-22-22-51.png)
 
+但是用**_绘图浏览器_** 编辑，图片会被缩放，和最后导出的文件可能有差异，不推荐用，直接在**_属性检查器_** 里修改属性，觉得合适后再填回程序中
+这种在调节某个元素的位置的时候比较方便，手拖动元素的位置，调整好后把**_属性检查器_**里的数据复制出来
+
+![](pictures/2023-10-16-17-18-36.png)
