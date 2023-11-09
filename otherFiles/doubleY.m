@@ -1,5 +1,5 @@
 %matlab
-x = linspace(0, 10);
+x = linspace(0, 8);
 y1 = sin(3*x);
 y2 = sin(3*x) .* exp(0.5*x);
 
@@ -10,6 +10,7 @@ xlabel('X-axis');
 ylabel('left Y-axis'); % 给左y轴添加轴标签
 ax=gca;
 ax.XLim=[0,8];
+
 yyaxis right; % 激活右边的轴
 plot(x,y2,"LineWidth",2);
 ylim([-150,150]); % 设置右y轴的界限

@@ -11,3 +11,4 @@ arrText=annotation('textarrow',[0.418,0.5],[0.72,0.79],'String','cos(x) = sin(x)
 arrText.FontName="Times New Roman";
 arrText.FontSize=14;
 arrText.LineWidth=2;
+arrText.String="test"
