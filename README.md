@@ -1,17 +1,18 @@
 <!-- vscode-markdown-toc -->
-* 1. [科研绘图常用软件(数据图)](#)
-	* 1.1. [matlab](#matlab)
-	* 1.2. [origin](#origin)
-	* 1.3. [python](#python)
-	* 1.4. [R 语言](#R)
-	* 1.5. [其它](#-1)
-* 2. [matlab 绘图](#matlab-1)
-* 3. [细节调整与其他](#-1)
-	* 3.1. [调整坐标轴小数位数](#-1)
-	* 3.2. [调整图例中线段的长度](#-1)
-	* 3.3. [双坐标轴](#-1)
-	* 3.4. [添加标注](#-1)
-	* 3.5. [其他类型的图&&图通道](#-1)
+
+- 1. [科研绘图常用软件(数据图)](#)
+  - 1.1. [matlab](#matlab)
+  - 1.2. [origin](#origin)
+  - 1.3. [python](#python)
+  - 1.4. [R 语言](#R)
+  - 1.5. [其它](#-1)
+- 2. [matlab 绘图](#matlab-1)
+- 3. [细节调整与其他](#-1)
+  - 3.1. [调整坐标轴小数位数](#-1)
+  - 3.2. [调整图例中线段的长度](#-1)
+  - 3.3. [双坐标轴](#-1)
+  - 3.4. [添加标注](#-1)
+  - 3.5. [其他类型的图&&图通道](#-1)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -31,7 +32,7 @@ _更新时间：2023 年 11 月 8 日星期三_
 
 ---
 
-##  1. <a name=''></a>科研绘图常用软件(数据图)
+## 1. <a name=''></a>科研绘图常用软件(数据图)
 
 matlab origin python R 语言 其它
 
@@ -46,7 +47,7 @@ matlab origin python R 语言 其它
 
 ---
 
-###  1.1. <a name='matlab'></a>matlab
+### 1.1. <a name='matlab'></a>matlab
 
 <div align=center><img  src="pictures/2023-11-08-10-22-24.png"  width = "600" alt="图片加载失败" /></div>
 
@@ -54,7 +55,7 @@ matlab origin python R 语言 其它
 
 ---
 
-###  1.2. <a name='origin'></a>origin
+### 1.2. <a name='origin'></a>origin
 
 <div align=center><img  src="pictures/2023-11-08-10-37-46.png"  width = "600" alt="图片加载失败" /></div>
 
@@ -62,7 +63,7 @@ matlab origin python R 语言 其它
 
 ---
 
-###  1.3. <a name='python'></a>python
+### 1.3. <a name='python'></a>python
 
 <div align=center><img  src="pictures/2023-11-08-11-03-19.png"  width = "200"  alt="图片加载失败" /></div>
 
@@ -70,19 +71,19 @@ matlab origin python R 语言 其它
 
 ---
 
-###  1.4. <a name='R'></a>R 语言
+### 1.4. <a name='R'></a>R 语言
 
 <div align=center><img  src="pictures/2023-11-08-11-06-24.png"   alt="图片加载失败" /></div>
 
 ---
 
-###  1.5. <a name='-1'></a>其它
+### 1.5. <a name='-1'></a>其它
 
 GraphPadPrison SigmaLot EXCEL
 
 ---
 
-##  2. <a name='matlab-1'></a>matlab 绘图
+## 2. <a name='matlab-1'></a>matlab 绘图
 
 首先生成数据
 
@@ -326,9 +327,9 @@ exportgraphics(myFig, "myFig.png", "Resolution", 600);
 
 <div align=center><img  src="pictures/2023-11-08-20-41-38.png"  width = "450"  alt="图片加载失败" /></div>
 
-##  3. <a name='-1'></a>细节调整与其他
+## 3. <a name='-1'></a>细节调整与其他
 
-###  3.1. <a name='-1'></a>调整坐标轴小数位数
+### 3.1. <a name='-1'></a>调整坐标轴小数位数
 
 有时会希望坐标轴的数字保持相同的小数位数,更整齐
 
@@ -345,7 +346,7 @@ ax.YTickLabel=num2str(get(gca,'yTick')','%.1f');
 
 <div align=center><img  src="pictures/8_1.jpg"  width = "400"  alt="图片加载失败" /></div>
 
-###  3.2. <a name='-1'></a>调整图例中线段的长度
+### 3.2. <a name='-1'></a>调整图例中线段的长度
 
 有时,发现图例中的标识线段太长
 
@@ -359,7 +360,7 @@ lgd.ItemTokenSize=[15,18];
 
 注意,这个属性在属性检查器里并没有,是网上看到的,还有其他的实现方式,但这个最快,最好
 
-###  3.3. <a name='-1'></a>双坐标轴
+### 3.3. <a name='-1'></a>双坐标轴
 
 <div align=center><img  src="pictures/15.jpg"  width = "400"  alt="图片加载失败" /></div>
 
@@ -387,7 +388,7 @@ ax=gca;
 
 <div align=center><img  src="pictures/15_1.jpg"  width = "400"  alt="图片加载失败" /></div>
 
-###  3.4. <a name='-1'></a>添加标注
+### 3.4. <a name='-1'></a>添加标注
 
 <div align=center><img  src="pictures/2023-11-08-21-46-19.png"  alt="图片加载失败" /></div>  
 <br/>  
@@ -415,7 +416,7 @@ arrText.LineWidth=2;
 
 <div align=center><img  src="pictures/2023-11-08-21-58-41.png"  width = "400"  alt="图片加载失败" /></div>
 
-###  3.5. <a name='-1'></a>其他类型的图&&图通道
+### 3.5. <a name='-1'></a>其他类型的图&&图通道
 
 matlab 功能很强大,可以画多种类型的图,数据处理,仿真,计算,写上位机.......
 
@@ -453,3 +454,130 @@ matlab 功能很强大,可以画多种类型的图,数据处理,仿真,计算,�
     <td><img src="pictures/2023-11-08-22-32-32.png" alt="图片加载失败"></td>
     </tr>
 </table>
+
+## 附录 完整程序
+
+其他例子见 otherFiles
+
+```matlab
+% ===================================================
+% 作者: jhshe
+% 版本: 1.0
+% 邮箱: jh_she@qq.com
+% 创建时间: 2023/10/11 星期三
+% 修改时间：2023/11/8 星期三
+% ===================================================
+
+clc, clear, close all;
+%% 创建数据 start ===================================
+step=1e-2;
+x= (0:step:12*pi);
+sinx=sin(x);
+cosx=cos(x);
+% 创建数据 end ======================================
+
+%% 外部导入 start ===================================
+% step=1e-2;
+% x= (0:step:6*pi)';
+% sinx=sin(x);
+% cosx=cos(x);
+% writematrix(x,   "testData.xls","Sheet",1,"Range","A1");
+% writematrix(sinx,"testData.xls","Sheet",1,"Range","B1");
+% writematrix(cosx,"testData.xls","Sheet",1,"Range","C1");
+% data=readmatrix("testData.xls");
+% x=data(:,1);sinx=data(:,2);cosx=data(:,3);
+% 外部导入 end ======================================
+
+%% 参数化设置属性 start ==============================
+figureFontSize = 16; %图片中文字的大小
+axesLineWidth = 1; %坐标轴的线宽
+waveLineWidth = 3; %波形的线宽
+% 参数化设置属性 end =================================
+
+%% 画图 start ========================================
+myFig = figure(1); %创建myFig对象
+myFig.Name = "testFig";
+myFig.Units = "centimeters";
+myFig.Position = [20 18 20 10]; %坐标x,y,长，宽
+% myFig.Colormap=lines;
+% myFig.Color = myFig.Colormap(80,:); %背景色白色
+myFig.Color = [1,1,1]; %背景色白色
+% inspect(gcf); %打开属性检查器
+% plotbrowser on;%打开绘图浏览器
+% propertyeditor;%打开属性编辑器
+L_sinx = plot(x, sinx); %创建sinx波形对象
+hold on;
+L_cosx = plot(x, cosx); %创建cosx波形对象
+
+hold on;
+% 画图 end =====================================
+
+%% 修改坐标轴属性 start =========================
+ax = gca; %获取当先坐标轴(get current axes)
+ax.XLim = [0 6 * pi];
+ax.YLim = [-1.2 1.2];
+ax.FontSize = figureFontSize;
+ax.FontName = "Times New Roman";
+ax.GridLineStyle = "--";
+ax.XGrid = "on";
+ax.XMinorGrid = "on";
+ax.XMinorTick = "on";
+ax.YGrid = "on";
+ax.YMinorGrid = "off";
+ax.YMinorTick = "on";
+ax.LineWidth = axesLineWidth;
+% ax.YTickLabel=num2str(get(gca,'yTick')','%.1f');
+ax.XLabel.FontSize = figureFontSize;
+ax.XTick = (pi:pi:6*pi);
+ax.XTickLabel=num2str(get(gca,'xTick')'/pi,"%d\x03C0");
+% 方法1
+% temp=num2str(get(gca,'xTick')'/pi,"%d");
+% for i=1:1:length(temp)
+% temp1(i,:)=[temp(i),'\pi'];
+% end
+% set(gca,'xTickLabel',temp1);
+% 方法2
+% ax.XTick = (0:pi:6*pi);
+% ax.XTickLabel = ["0"; "\pi"; "2\pi"; "3\pi"; "4\pi"; "5\pi"; "6\pi"];
+% 方法3
+set(gca,'xTickLabel',num2str(get(gca,'xTick')'/pi,"%d\x03C0"));
+% ax.XLabel.Interpreter="latex";
+ax.XLabel.String = "{\bfangle} {\bf\theta }";
+ax.YLabel.String = "{\bf{\it f }({\theta})} ";
+ax.YLabel.Rotation = 0;
+ax.Title.String = "{\bfsin {\itx} and cos {\itx}}";
+
+% =============== 修改坐标轴属性 end =====================================
+
+%% =============== 修改波形属性 start =====================================
+L_sinx.Color = [0,0,0];
+L_sinx.LineStyle = "--";
+L_sinx.LineWidth = waveLineWidth;
+L_sinx.Marker = "o";
+L_sinx.MarkerIndices = (1:50:length(sin(x))); %曲线上的标记点(避免数据标记过于密集)
+L_sinx.MarkerEdgeColor = [0,0,0];
+L_sinx.MarkerFaceColor = "auto";
+L_sinx.MarkerSize = waveLineWidth * 2;
+
+L_cosx.Color = "red";
+L_cosx.LineStyle = "--";
+L_cosx.LineWidth = waveLineWidth;
+L_cosx.Marker = "diamond";
+L_cosx.MarkerIndices = (1:50:length(cos(x)));
+L_cosx.MarkerFaceColor = "none";
+L_cosx.MarkerEdgeColor = "red"; %调整曲线的RGB色
+L_cosx.MarkerSize = waveLineWidth * 2;
+% =============== 修改波形属性 end =====================================
+
+%% =============== 加图例 start =====================================
+lgd = legend(["sin(x)", "cos(x)"]);
+lgd.Location = "northeast";
+% lgd.Position=[0.792737242214184,0.812893100354656,0.101747172219413,0.091509431488109];
+% =============== 加图例 end =====================================
+
+%% 复制到剪切板，导出为文件
+copygraphics(myFig, "Resolution", 600);
+exportgraphics(myFig, "myFig.png", "Resolution", 600);
+% print(myfig, 'myFig.svg', '-dsvg');
+% print(myfig, 'myFig.pdf', '-dpdf', '-r300');
+```
