@@ -1,26 +1,25 @@
-# matlab 绘图学习笔记
-
 <!-- vscode-markdown-toc -->
-
-- 1. [科研绘图常用软件(数据图)](#)
-  - 1.1. [matlab](#matlab)
-  - 1.2. [origin](#origin)
-  - 1.3. [python](#python)
-  - 1.4. [R 语言](#R)
-  - 1.5. [其它](#-1)
-- 2. [matlab 绘图](#matlab-1)
-- 3. [细节调整与其他](#-1)
-  - 3.1. [调整坐标轴小数位数](#-1)
-  - 3.2. [调整图例中线段的长度](#-1)
-  - 3.3. [双坐标轴](#-1)
-  - 3.4. [添加标注](#-1)
-  - 3.5. [其他类型的图&&图通道](#-1)
+* 1. [科研绘图常用软件(数据图)](#)
+	* 1.1. [matlab](#matlab)
+	* 1.2. [origin](#origin)
+	* 1.3. [python](#python)
+	* 1.4. [R 语言](#R)
+	* 1.5. [其它](#-1)
+* 2. [matlab 绘图](#matlab-1)
+* 3. [细节调整与其他](#-1)
+	* 3.1. [调整坐标轴小数位数](#-1)
+	* 3.2. [调整图例中线段的长度](#-1)
+	* 3.3. [双坐标轴](#-1)
+	* 3.4. [添加标注](#-1)
+	* 3.5. [其他类型的图&&图通道](#-1)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+
+# matlab 绘图学习笔记
 
 _渡河蚂蚁_
 _创建时间：2023 年 10 月 11 日星期三_
@@ -32,7 +31,7 @@ _更新时间：2023 年 11 月 8 日星期三_
 
 ---
 
-## 1. <a name=''></a>科研绘图常用软件(数据图)
+##  1. <a name=''></a>科研绘图常用软件(数据图)
 
 matlab origin python R 语言 其它
 
@@ -47,7 +46,7 @@ matlab origin python R 语言 其它
 
 ---
 
-### 1.1. <a name='matlab'></a>matlab
+###  1.1. <a name='matlab'></a>matlab
 
 <div align=center><img  src="pictures/2023-11-08-10-22-24.png"  width = "600" alt="图片加载失败" /></div>
 
@@ -55,7 +54,7 @@ matlab origin python R 语言 其它
 
 ---
 
-### 1.2. <a name='origin'></a>origin
+###  1.2. <a name='origin'></a>origin
 
 <div align=center><img  src="pictures/2023-11-08-10-37-46.png"  width = "600" alt="图片加载失败" /></div>
 
@@ -63,7 +62,7 @@ matlab origin python R 语言 其它
 
 ---
 
-### 1.3. <a name='python'></a>python
+###  1.3. <a name='python'></a>python
 
 <div align=center><img  src="pictures/2023-11-08-11-03-19.png"  width = "200"  alt="图片加载失败" /></div>
 
@@ -71,19 +70,19 @@ matlab origin python R 语言 其它
 
 ---
 
-### 1.4. <a name='R'></a>R 语言
+###  1.4. <a name='R'></a>R 语言
 
 <div align=center><img  src="pictures/2023-11-08-11-06-24.png"   alt="图片加载失败" /></div>
 
 ---
 
-### 1.5. <a name='-1'></a>其它
+###  1.5. <a name='-1'></a>其它
 
 GraphPadPrison SigmaLot EXCEL
 
 ---
 
-## 2. <a name='matlab-1'></a>matlab 绘图
+##  2. <a name='matlab-1'></a>matlab 绘图
 
 首先生成数据
 
@@ -327,9 +326,9 @@ exportgraphics(myFig, "myFig.png", "Resolution", 600);
 
 <div align=center><img  src="pictures/2023-11-08-20-41-38.png"  width = "450"  alt="图片加载失败" /></div>
 
-## 3. <a name='-1'></a>细节调整与其他
+##  3. <a name='-1'></a>细节调整与其他
 
-### 3.1. <a name='-1'></a>调整坐标轴小数位数
+###  3.1. <a name='-1'></a>调整坐标轴小数位数
 
 有时会希望坐标轴的数字保持相同的小数位数,更整齐
 
@@ -346,7 +345,7 @@ ax.YTickLabel=num2str(get(gca,'yTick')','%.1f');
 
 <div align=center><img  src="pictures/8_1.jpg"  width = "400"  alt="图片加载失败" /></div>
 
-### 3.2. <a name='-1'></a>调整图例中线段的长度
+###  3.2. <a name='-1'></a>调整图例中线段的长度
 
 有时,发现图例中的标识线段太长
 
@@ -360,7 +359,7 @@ lgd.ItemTokenSize=[15,18];
 
 注意,这个属性在属性检查器里并没有,是网上看到的,还有其他的实现方式,但这个最快,最好
 
-### 3.3. <a name='-1'></a>双坐标轴
+###  3.3. <a name='-1'></a>双坐标轴
 
 <div align=center><img  src="pictures/15.jpg"  width = "400"  alt="图片加载失败" /></div>
 
@@ -388,7 +387,7 @@ ax=gca;
 
 <div align=center><img  src="pictures/15_1.jpg"  width = "400"  alt="图片加载失败" /></div>
 
-### 3.4. <a name='-1'></a>添加标注
+###  3.4. <a name='-1'></a>添加标注
 
 <div align=center><img  src="pictures/2023-11-08-21-46-19.png"  alt="图片加载失败" /></div>  
 <br/>  
@@ -416,7 +415,7 @@ arrText.LineWidth=2;
 
 <div align=center><img  src="pictures/2023-11-08-21-58-41.png"  width = "400"  alt="图片加载失败" /></div>
 
-### 3.5. <a name='-1'></a>其他类型的图&&图通道
+###  3.5. <a name='-1'></a>其他类型的图&&图通道
 
 matlab 功能很强大,可以画多种类型的图,数据处理,仿真,计算,写上位机.......
 
