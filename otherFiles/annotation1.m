@@ -12,3 +12,6 @@ arrText.FontName="Times New Roman";
 arrText.FontSize=14;
 arrText.LineWidth=2;
 arrText.String="test"
+
+
+set_param("s2_3_1_tP/Ls1","Resistance","50")

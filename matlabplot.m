@@ -46,7 +46,6 @@ myFig.Color = [1,1,1]; %背景色白色
 L_sinx = plot(x, sinx); %创建sinx波形对象
 hold on;
 L_cosx = plot(x, cosx); %创建cosx波形对象
-
 hold on;
 % 画图 end =====================================
 
